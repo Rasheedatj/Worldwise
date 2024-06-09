@@ -49,15 +49,15 @@
       "id": "12345678"
     },
     {
-      "id": "06d9",
-      "cityName": "Brougham",
+      "id": "92ef",
+      "cityName": "Birmingham",
       "country": "United Kingdom of Great Britain and Northern Ireland (the)",
       "emoji": "GB",
-      "date": "2024-06-09T01:31:22.194Z",
+      "date": "2024-06-09T23:36:20.833Z",
       "notes": "amazing trip",
       "position": {
-        "lat": 54.635697306063854,
-        "lng": -2.7026367187500004
+        "lat": 52.45600939264076,
+        "lng": -1.9335937500000002
       }
     }
   ]

@@ -74,8 +74,8 @@ function Form() {
       },
     };
 
-    console.log(newCity);
     await createCity(newCity);
+    // go back to city page after adding new city
     navigate('/app/cities');
   }
 
