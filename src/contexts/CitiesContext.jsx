@@ -46,7 +46,7 @@ function CityProvider({ children }) {
     try {
       dispatch({ type: 'loading' });
       const res = await fetch(`${BASE_URL}/${id}`);
-      if (!res.ok) throw new Error('Error fetching from this endpoint');
+      if (!res.ok) throw new Error('Error getting current city');
       const data = await res.json();
       dispatch({ type: 'city/loaded', payload: data });
     } catch (error) {
@@ -85,7 +85,7 @@ function CityProvider({ children }) {
           'content-Type': 'application/json',
         },
       });
-      if (!res.ok) throw new Error('Error loading cities');
+      if (!res.ok) throw new Error('Error creating a new city');
       const data = await res.json();
       dispatch({ type: 'city/created', payload: data });
     } catch (error) {
@@ -103,7 +103,7 @@ function CityProvider({ children }) {
       const res = await fetch(`${BASE_URL}/${id}`, {
         method: 'Delete',
       });
-      if (!res.ok) throw new Error('Error deleting city');
+      if (!res.ok) throw new Error('Error deleting this city');
     } catch (error) {
       console.log(error);
     } finally {
