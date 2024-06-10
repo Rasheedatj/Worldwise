@@ -43,6 +43,8 @@ function CityProvider({ children }) {
   const { cities, isLoading, currentCity } = state;
 
   async function getCurCity(id) {
+    if (Number(id) === currentCity.id) return;
+
     try {
       dispatch({ type: 'loading' });
       const res = await fetch(`${BASE_URL}/${id}`);
