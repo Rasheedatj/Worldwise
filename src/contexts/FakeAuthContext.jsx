@@ -1,4 +1,4 @@
-import { act, createContext, useContext, useReducer } from 'react';
+import { createContext, useContext, useReducer } from 'react';
 
 const AuthContext = createContext();
 
@@ -45,6 +45,7 @@ function AuthProvider({ children }) {
 
 function useAuth() {
   const context = useContext(AuthContext);
+  if (context === undefined) throw new Error('Context is used out of scope');
   return context;
 }
 

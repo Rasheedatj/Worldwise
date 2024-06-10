@@ -1,6 +1,6 @@
 import styles from './Flag.module.css';
 
-function Flag(emoji, cityName = 'city', type = 'normal') {
+function Flag(emoji, cityName = 'city flag', type = 'normal') {
   return (
     <img
       className={`${type === 'normal' ? styles.flag : styles.flag2}`}

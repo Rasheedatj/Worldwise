@@ -3,7 +3,7 @@ import PageNav from '../components/PageNav';
 import styles from './Login.module.css';
 import Button from '../components/Button';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../contexts/FakeAuthContexr';
+import { useAuth } from '../contexts/FakeAuthContext';
 
 export default function Login() {
   // PRE-FILL FOR DEV PURPOSES
@@ -14,14 +14,14 @@ export default function Login() {
 
   useEffect(
     function () {
-      isUserAuthenticated && navigate('/app');
+      isUserAuthenticated && navigate('/app', { replace: true });
     },
     [isUserAuthenticated, navigate]
   );
 
   function handleLogin(e) {
     e.preventDefault();
-    login(email, password);
+    if (email && password) login(email, password);
   }
 
   return (
