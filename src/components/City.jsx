@@ -24,7 +24,7 @@ function City() {
     function () {
       getCurCity(id);
     },
-    [id]
+    [id, getCurCity]
   );
 
   if (isLoading) return <Spinner />;

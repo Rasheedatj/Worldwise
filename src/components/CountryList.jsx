@@ -3,8 +3,10 @@ import Spinner from './Spinner';
 import CountryItem from './CountryItem';
 import Message from './Message';
 import { useCity } from '../contexts/CitiesContext';
+
 function CountryList() {
   const { cities, isLoading } = useCity();
+
   if (isLoading) return <Spinner />;
   if (!cities.length)
     return <Message message='Click the map to add your first city' />;
@@ -14,6 +16,7 @@ function CountryList() {
       return [...arr, { country: curr.country, emoji: curr.emoji }];
     else return arr;
   }, []);
+
   return (
     <ul className={styles.countryList}>
       {countries.map((country) => (

@@ -2,6 +2,7 @@ import Logo from './Logo';
 import AppNav from './AppNav';
 import styles from './Sidebar.module.css';
 import { Outlet, Link } from 'react-router-dom';
+import Footer from './Footer';
 
 function Sidebar() {
   return (
@@ -11,11 +12,7 @@ function Sidebar() {
       </Link>
       <AppNav />
       <Outlet />
-      <footer className={styles.footer}>
-        <p className={styles.copyright}>
-          &copy; Copyright {new Date().getFullYear()} by WorldWised inc.
-        </p>
-      </footer>
+      <Footer />
     </aside>
   );
 }

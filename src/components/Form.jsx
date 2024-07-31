@@ -39,7 +39,6 @@ function Form() {
           );
           if (!res.ok) throw new Error('Error fetching data');
           const data = await res.json();
-          console.log(data);
           if (!data.countryCode)
             throw new Error(
               "That doesn't seem to be a city. Click somewhere else 😉"
